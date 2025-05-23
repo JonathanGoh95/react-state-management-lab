@@ -1,8 +1,8 @@
 // src/App.jsx
 import { useState } from "react";
-import ZombieFighters  from "./assets/components/ZombieFighters";
-import TeamStats from "./assets/components/TeamStats";
-import TeamDisplay from "./assets/components/TeamDisplay";
+import ZombieFighters  from "./components/ZombieFighters";
+import TeamStats from "./components/TeamStats";
+import TeamDisplay from "./components/TeamDisplay";
 import './App.css'
 
 
