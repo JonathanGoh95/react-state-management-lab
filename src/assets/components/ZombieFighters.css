@@ -1,0 +1,14 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.fighters {
+  border: 2px solid white;
+  border-radius: 2%;
+}
+
+.fighterText {
+  margin-left: 5px;
+}
