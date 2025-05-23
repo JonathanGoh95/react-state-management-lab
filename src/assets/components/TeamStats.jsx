@@ -1,9 +1,9 @@
 const TeamStats = ({money, teamStrength, teamAgility}) => {
-    return(<div className = 'teamStats'>
-        <h3>Money: {money}</h3>
-        <h3>Team Strength: {teamStrength}</h3>
-        <h3>Team Agility: {teamAgility}</h3>
-    </div>)
+    return(<>
+        <h2>Money: {money}</h2>
+        <h2>Team Strength: {teamStrength}</h2>
+        <h2>Team Agility: {teamAgility}</h2>
+    </>)
 }
 
 export default TeamStats

@@ -1,19 +1,22 @@
+import ZombieImage from "./ZombieImage";
+
 const TeamDisplay = ({team, setTeam, fighters, setZombieFighters, money, setMoney, teamStrength, setTeamStrength, teamAgility, setTeamAgility}) => {
   const handleRemoveFighter = (fighter) => {
-    setTeam(team.filter((elem) => elem.id !== fighter.id));
-    setZombieFighters([...fighters, fighter]);
-    setMoney(money + fighter.price);
-    setTeamStrength(teamStrength - fighter.strength)
-    setTeamAgility(teamAgility - fighter.agility)
+    setTeam(team.filter((elem) => elem.id !== fighter.id)); // Removes the Selected Fighter from the Team Array
+    setZombieFighters([...fighters, fighter]);              // Puts the fighter back in the Zombie Fighters Array
+    setMoney(money + fighter.price);                        // Increment the money back based on the price of the fighter
+    setTeamStrength(teamStrength - fighter.strength)        // Deduct the Team Strength accordingly
+    setTeamAgility(teamAgility - fighter.agility)           // Deduct the Team Agility accordingly
   }
+
   return (
-  <div>
+  <>
     <h2>Team</h2>
     <ul>
         {team.length === 0 && <p><b>Pick some team members!</b></p>}
       {team.map((fighter) => (
         <li key={fighter.id}>
-          <img src={fighter.img} />
+          <ZombieImage img={fighter.img}/>
           <p><b>{fighter.name}</b></p>
           <p>Price: {fighter.price}</p>
           <p>Strength: {fighter.strength}</p>
@@ -22,7 +25,7 @@ const TeamDisplay = ({team, setTeam, fighters, setZombieFighters, money, setMone
         </li>
       ))}
     </ul>
-  </div>
+  </>
   )
 };
 
