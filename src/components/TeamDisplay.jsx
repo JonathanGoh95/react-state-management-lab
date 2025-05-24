@@ -12,8 +12,8 @@ const TeamDisplay = ({team, setTeam, fighters, setZombieFighters, money, setMone
   return (
   <>
     <h2>Team</h2>
+    {team.length === 0 && <h3>Pick some team members!</h3>}
     <ul>
-        {team.length === 0 && <p><b>Pick some team members!</b></p>}
       {team.map((fighter) => (
         <li key={fighter.id}>
           <ZombieImage img={fighter.img}/>
